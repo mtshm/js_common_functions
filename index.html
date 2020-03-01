@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400&amp;subset=japanese" rel="stylesheet" />
+  <link rel="stylesheet" href="dist/css/style.css">
+
+  <!-- 開発時のCSSの読み込み -->
+  <!-- <link rel="stylesheet" href="src/css/style.css" /> -->
+  <title>js_common_functions</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="site-header container">
+    <div class="logo">Marie Cafe</div>
+
+    <!-- ハンバーガーボタン -->
+    <div class="hamburger-button" id="js-toggle-sm">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- ヘッダーナビゲーション -->
+    <nav class="header-nav" id="js-toggle-sm-target">
+      <ul class="header-nav__list">
+        <li class="header-nav__item">
+          <a href="" class="header-nav__link">Shop</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="" class="header-nav__link">Concept</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="" class="header-nav__link">Location</a>
+        </li>
+
+        <!-- アコーディオンメニュー1 -->
+        <li class="header-nav__item">
+          <a class="header-nav__link js-accordion-element">Online Store</a>
+          <div class="header-sub-nav">
+            <p class="header-sub-nav__item">
+              <a href="" class="header-sub-nav__link">FAQ</a>
+            </p>
+            <p class="header-sub-nav__item">
+              <a href="" class="header-sub-nav__link">ログイン</a>
+            </p>
+            <p class="header-sub-nav__item">
+              <a href="" class="header-sub-nav__link">新規会員登録</a>
+            </p>
+          </div>
+        </li>
+
+        <!-- アコーディオンメニュー2 -->
+        <li class="header-nav__item">
+          <a class="header-nav__link js-accordion-element">Company</a>
+          <div class="header-sub-nav">
+            <p class="header-sub-nav__item">
+              <a href="" class="header-sub-nav__link">会社情報</a>
+            </p>
+            <p class="header-sub-nav__item">
+              <a href="" class="header-sub-nav__link">お問い合わせ</a>
+            </p>
+            <p class="header-sub-nav__item">
+              <a href="" class="header-sub-nav__link">採用情報</a>
+            </p>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- スライダー -->
+    <section class="container">
+      <div class="slider" id="js-slider">
+        <div class="slide__container" id="js-slide-container">
+          <img src="./dist/images/isaac-benhesed-249427-unsplash.jpg" alt="" class="slide js-slide" />
+          <img src="./dist/images/florencia-viadana-760600-unsplash.jpg" alt="" class="slide js-slide" />
+          <img src="./dist/images/khara-woods-380290-unsplash.jpg" alt="" class="slide js-slide" />
+        </div>
+
+        <!-- ナビゲーション -->
+        <nav class="slider-nav">
+          <ul class="slider-nav__list">
+            <li class="slider-nav__playback slider-nav__playback--play" id="js-slider-play"></li>
+            <li class="slider-nav__playback slider-nav__playback--pause hidden" id="js-slider-pause"></li>
+            <li class="slider-nav__arrow slider-nav__arrow--prev js-slider-next js-slider-prev">
+              &lt;
+            </li>
+            <li class="slider-nav__arrow slider-nav__arrow--next js-slider-next">
+              &gt;
+            </li>
+          </ul>
+        </nav>
+
+        <!-- サムネイル(黒丸) -->
+        <ul class="thumb" id="js-thumb"></ul>
+      </div>
+    </section>
+
+    <!-- タブメニュー  -->
+    <section class="container">
+      <!-- タブ -->
+      <div class="tab-menu">
+        <ul class="tab-menu__list">
+          <li class="tab-menu__item">
+            <a href="" class="tab-menu__button js-tab-button active" data-id="drink">Drink</a>
+          </li>
+          <li class="tab-menu__item">
+            <a href="" class="tab-menu__button js-tab-button" data-id="sweets">Sweets</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 左のタブのコンテンツ -->
+      <div class="tab-contents">
+        <div class="tab-contents__list js-tab-contents active" id="drink">
+          <!-- 写真 -->
+          <a href="" class="tab-contents__unit">
+            <div class="tab-contents__item">
+              <img src="dist/images/jeremy-yap-199222-unsplash.jpg" alt="" class="tab-contents__img js-modal-open" />
+            </div>
+          </a>
+          <a href="" class="tab-contents__unit">
+            <div class="tab-contents__item">
+              <img src="dist/images/mike-marquez-364195-unsplash.jpg" alt="" class="tab-contents__img js-modal-open" />
+            </div>
+          </a>
+          <a href="" class="tab-contents__unit">
+            <div class="tab-contents__item">
+              <img src="dist/images/annie-spratt-76932-unsplash.jpg" alt="" class="tab-contents__img js-modal-open" />
+            </div>
+          </a>
+          <a href="" class="tab-contents__unit">
+            <div class="tab-contents__item">
+              <img src="dist/images/emre-gencer-364602-unsplash.jpg" alt="" class="tab-contents__img js-modal-open" />
+            </div>
+          </a>
+        </div>
+
+        <!-- 右のタブのコンテンツ -->
+        <div class="tab-contents__list js-tab-contents" id="sweets">
+          <!-- 写真 -->
+          <a href="" class="tab-contents__unit">
+            <div class="tab-contents__item">
+              <img src="dist/images/am-fl-1326231-unsplash.jpg" alt="" class="tab-contents__img js-modal-open" />
+            </div>
+          </a>
+          <a href="" class="tab-contents__unit">
+            <div class="tab-contents__item">
+              <img src="dist/images/elena-koycheva-774025-unsplash.jpg" alt=""
+                class="tab-contents__img js-modal-open" />
+            </div>
+          </a>
+          <a href="" class="tab-contents__unit">
+            <div class="tab-contents__item">
+              <img src="dist/images/plush-design-studio-773519-unsplash.jpg" alt=""
+                class="tab-contents__img js-modal-open" />
+            </div>
+          </a>
+          <a href="" class="tab-contents__unit">
+            <div class="tab-contents__item">
+              <img src="dist/images/markus-spiske-1439874-unsplash.jpg" alt=""
+                class="tab-contents__img js-modal-open" />
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- モーダル -->
+      <div id="js-modal-mask" class="hidden">
+        <div class="modal-wrapper">
+          <div class="modal-center">
+            <div class="modal-window hidden">
+              <img alt="" id="js-modal-img" />
+              <div id="js-modal-close">Close</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CSSのみで実装したタブメニュー -->
+    <section class="container">
+      <div class="tabs">
+
+        <!-- ラジオボタン -->
+        <input type="radio" name="switch" id="tab-1" checked />
+        <label for="tab-1" class="radio-manu__button">Shop</label>
+        <div class="radio-contents__item">
+          <p class="radio-contents__text">
+            小太鼓は扉のかっこうゴーシュ汁を火花で思っ一心ましまし。するとまだ気の毒でしましって先生なくた。
+            気の毒ましやんだはでしそして足の上手弾のうちにはどうぞ上手たまして、きみまで晩からすわりれんでない。
+            叩くすぎ何もめいめいを悪いましてこんどのかっこうのゴーシュたちに呆れ第何水顔の話へ飛びだしててたた。狸は一生けん命思ってやるた。兵隊は二くたびれ控室のようであるきて来なら。ゴーシュは目むしやわたしとふるえでいただいまし。
+            両手はセロをますますにしがゴーシュから舞台のように鳴ってゴーシュを弾いてさも眼がふるえてしまいだ。どうもとうとう町がゴーシュへ出たた。何思わずに音楽にまげて北の方に弾いたな。かっこうをとけないだ。「野鼠を構えない。
+          </p>
+        </div>
+
+        <input type="radio" name="switch" id="tab-2" />
+        <label for="tab-2" class="radio-manu__button">Concept</label>
+        <div class="radio-contents__item">
+          <p class="radio-contents__text">
+            みなは事実もちろんそんな発展家というののためをしますた。
+            多分同年を尊重心はどうもそんな担任ますませかもをしてならでをは攻撃弱らですないて、なるべくには掴みうなけれでです。権h力で釣らませのはとにかく前にすこぶるたるまい。もっと向さんに安心婆さんまだ説明から云っないただその上面いつか［＃「のについてお発見なくなけれでですば、その今も私か自分力をいから、三宅君の事を他人の何を充分お学習と聴いから私主義をご説明を歩くようにはなはだご観念にきまっでしたけれども、すでにけっして解と経っありからおいませのへしなまし。たとえばまたはお百姓をなり事もそう馬鹿とするなくから、その人からはなるたからという身がして来たです。
+          </p>
+        </div>
+
+        <input type="radio" name="switch" id="tab-3" />
+        <label for="tab-3" class="radio-manu__button">Location</label>
+        <div class="radio-contents__item">
+          <p class="radio-contents__text">
+            メロスは激怒した。必ず、かの邪智暴虐じゃちぼうぎゃくの王を除かなければならぬと決意した。メロスには政治がわからぬ。メロスは、村の牧人である。笛を吹き、羊と遊んで暮して来た。けれども邪悪に対しては、人一倍に敏感であった。きょう未明メロスは村を出発し、野を越え山越え、十里はなれた此このシラクスの市にやって来た。メロスには父も、母も無い。女房も無い。十六の、内気な妹と二人暮しだ。この妹は、村の或る律気な一牧人を、近々、花婿はなむことして迎える事になっていた。結婚式も間近かなのである。
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
