@@ -1,5 +1,7 @@
+## js_common_functions
+
 ## URL
-準備中
+https://mtshm-js-common-functions.netlify.com
 
 ## 概要
 web制作でよく見られるJavaScriptの機能の実装集です。
